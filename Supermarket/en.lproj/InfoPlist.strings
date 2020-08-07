@@ -1,0 +1,13 @@
+/* 
+  InfoPlist.strings
+  Supermarket
+
+  Created by User on 2020/08/05.
+  
+*/
+
+CFBundleDisplayName = "MarketFinder";
+
+NSLocationAlwaysUsageDescription = "Market Finder is need to mark nearby markets using the your location.";
+
+NSLocationWhenInUseUsageDescription = "Market Finder is need to mark nearby markets using the your location.";
