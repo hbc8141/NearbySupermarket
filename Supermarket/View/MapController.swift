@@ -8,8 +8,9 @@
 import UIKit
 import NMapsMap
 import RxSwift
+import FontAwesome_swift
 
-class MapController: UIViewController {
+class MapController: BaseViewController {
 
     // MARK: - Properties
     private lazy var mapView:NMFMapView = {
@@ -21,22 +22,23 @@ class MapController: UIViewController {
         return mapView
     }()
     
-    private let menuButton:UIButton = {
-        let button:UIButton = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("메뉴", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
+    private lazy var menuButton:BaseButton = BaseButton(fontIcon: .alignJustify, style: .solid)
+    
+    private let returnMyLocationButton:BaseButton = {
+        let button:BaseButton = BaseButton(fontIcon: .crosshairs, style: .solid)
+        button.backgroundColor = .white
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 25
         
         return button
     }()
     
-    private let returnMyLocationButton:UIButton = {
-        let button:UIButton = UIButton()
-        button.setTitle("내 위치로", for: .normal)
-        button.setTitleColor(.blue, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
+    private var cameraUpdate:NMFCameraUpdate = {
+        let cameraUpdate:NMFCameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5423752, lng: 126.951168), zoomTo: 15)
+        cameraUpdate.animation = .fly
+        cameraUpdate.animationDuration = 1.5
         
-        return button
+        return cameraUpdate
     }()
 
     let viewModel:MapViewModel = MapViewModel()
@@ -48,21 +50,21 @@ class MapController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.view.backgroundColor = .white
-
-        self.view.addSubview(self.mapView)
-        self.view.addSubview(self.menuButton)
-        self.view.addSubview(self.returnMyLocationButton)
+        
+        self.view.addSubviews(views: [
+            self.mapView, self.menuButton, self.returnMyLocationButton
+        ])
         
         self.setupLayouts()
         self.bindUI()
         
-        self.mapView.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5423752, lng: 126.951168)))
+        self.mapView.moveCamera(cameraUpdate)
         
         LocationManager.shared.requestPermission()
     }
     
     // MARK: - Function
-    private func setupLayouts() -> Void {
+    override func setupLayouts() -> Void {
         if #available(iOS 11, *) {
             self.menuButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
             self.returnMyLocationButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
@@ -77,12 +79,12 @@ class MapController: UIViewController {
             self.menuButton.heightAnchor.constraint(equalToConstant: 50),
             
             self.returnMyLocationButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30),
-            self.returnMyLocationButton.widthAnchor.constraint(equalToConstant: 75),
+            self.returnMyLocationButton.widthAnchor.constraint(equalToConstant: 50),
             self.returnMyLocationButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
     
-    private func bindUI() -> Void {
+    override func bindUI() -> Void {
         self.menuButton.rx.tap
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .flatMap({ () -> Observable<LeftMenuContorller> in
@@ -103,15 +105,10 @@ class MapController: UIViewController {
         
         self.returnMyLocationButton.rx.tap
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
-            .flatMap { () -> Observable<NMFCameraUpdate> in
-                let cameraUpdate:NMFCameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.5666102, lng: 126.9783881), zoomTo: 15)
-                cameraUpdate.animation = .fly
-                cameraUpdate.animationDuration = 1.5
-                
-                return .just(cameraUpdate)
-            }.asDriver(onErrorJustReturn: NMFCameraUpdate())
-            .drive(onNext: { (camera:NMFCameraUpdate) in
-                self.mapView.moveCamera(camera)
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.mapView.moveCamera(self.cameraUpdate)
             }).disposed(by: self.disposeBag)
         
         self.viewModel.marketMarkers

@@ -28,9 +28,9 @@
 	<string>사용자의 위치를 사용하려 합니다. 괜찮으시겠습니까?</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Font Awesome 5 Free-Solid-900.otf</string>
-		<string>Font Awesome 5 Free-Regular-400.otf</string>
-		<string>Font Awesome 5 Brands-Regular-400.otf</string>
+		<string>fa-brands-400.ttf</string>
+		<string>fa-regular-400.ttf</string>
+		<string>fa-brands-400.ttf</string>
 	</array>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>

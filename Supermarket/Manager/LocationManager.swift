@@ -54,7 +54,7 @@ class LocationManager {
     
     func authorizationStatus() -> CLAuthorizationStatus {
         if #available(iOS 14, *) {
-            return self.locationMananger.authorizationStatus()
+            return self.locationMananger.authorizationStatus
         } else {
             return CLLocationManager.authorizationStatus()
         }

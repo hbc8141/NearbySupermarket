@@ -17,15 +17,22 @@
 		CE1DC5B824A79BB500B5E880 /* LeftMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5B724A79BB500B5E880 /* LeftMenuController.swift */; };
 		CE1DC5BA24A79BD100B5E880 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5B924A79BD100B5E880 /* MapViewModel.swift */; };
 		CE1DC5C324A7A11B00B5E880 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5C224A7A11B00B5E880 /* Font.swift */; };
-		CE1DC5C624A7A13000B5E880 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5C524A7A13000B5E880 /* UIFont.swift */; };
 		CE1DC5C824A7A84B00B5E880 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5C724A7A84B00B5E880 /* LocationManager.swift */; };
 		CE1DC5CC24A7B34200B5E880 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5CB24A7B34200B5E880 /* Market.swift */; };
 		CE1DC5D024A8D5FB00B5E880 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5CF24A8D5FB00B5E880 /* Manager.swift */; };
 		CE1DC5D224A8E13800B5E880 /* MapController+nmaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5D124A8E13800B5E880 /* MapController+nmaps.swift */; };
 		CE86702724D9B23400C0B295 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE86702924D9B23400C0B295 /* InfoPlist.strings */; };
 		CE86702D24D9C2C900C0B295 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE86702C24D9C2C900C0B295 /* Colors.xcassets */; };
-		CE86702F24D9C2E800C0B295 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86702E24D9C2E800C0B295 /* Color.swift */; };
-		CE86703124D9CA3400C0B295 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86703024D9CA3400C0B295 /* UIImage.swift */; };
+		CE86702F24D9C2E800C0B295 /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86702E24D9C2E800C0B295 /* Color+extension.swift */; };
+		CE86703124D9CA3400C0B295 /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86703024D9CA3400C0B295 /* UIImage+extension.swift */; };
+		CEAB3DFA268E11190009455E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3DF9268E11180009455E /* BaseViewController.swift */; };
+		CEAB3DFE268E11D70009455E /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3DFD268E11D70009455E /* BaseButton.swift */; };
+		CEAB3E01268E12780009455E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E00268E12780009455E /* BaseView.swift */; };
+		CEAB3E0B268E18150009455E /* fa-brands-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1DC5BE24A79F0200B5E880 /* fa-brands-400.ttf */; };
+		CEAB3E0C268E18150009455E /* fa-regular-400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1DC5BC24A79F0200B5E880 /* fa-regular-400.ttf */; };
+		CEAB3E0D268E18150009455E /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1DC5BD24A79F0200B5E880 /* fa-solid-900.ttf */; };
+		CEAB3E1A268E1CCC0009455E /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E19268E1CCC0009455E /* UIView+extension.swift */; };
+		CEAB3E23268E20C40009455E /* MapController+location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E22268E20C40009455E /* MapController+location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +53,6 @@
 		CE1DC5BD24A79F0200B5E880 /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
 		CE1DC5BE24A79F0200B5E880 /* fa-brands-400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-brands-400.ttf"; sourceTree = "<group>"; };
 		CE1DC5C224A7A11B00B5E880 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
-		CE1DC5C524A7A13000B5E880 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		CE1DC5C724A7A84B00B5E880 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		CE1DC5CB24A7B34200B5E880 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		CE1DC5CF24A8D5FB00B5E880 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
@@ -55,8 +61,13 @@
 		CE86702A24D9B24C00C0B295 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE86702B24D9B24C00C0B295 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE86702C24D9C2C900C0B295 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		CE86702E24D9C2E800C0B295 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		CE86703024D9CA3400C0B295 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		CE86702E24D9C2E800C0B295 /* Color+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+extension.swift"; sourceTree = "<group>"; };
+		CE86703024D9CA3400C0B295 /* UIImage+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		CEAB3DF9268E11180009455E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CEAB3DFD268E11D70009455E /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		CEAB3E00268E12780009455E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CEAB3E19268E1CCC0009455E /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		CEAB3E22268E20C40009455E /* MapController+location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapController+location.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +121,7 @@
 		CE1DC59924A793D600B5E880 /* Supermarket */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB3DF8268E11010009455E /* Base */,
 				CE1DC5C424A7A12600B5E880 /* Extension */,
 				CE1DC5BF24A79F4900B5E880 /* Manager */,
 				CE1DC5BB24A79EF700B5E880 /* Fonts */,
@@ -133,6 +145,7 @@
 				CE1DC59E24A793D600B5E880 /* MapController.swift */,
 				CE1DC5B424A7991A00B5E880 /* CustomNavController.swift */,
 				CE1DC5D124A8E13800B5E880 /* MapController+nmaps.swift */,
+				CEAB3E22268E20C40009455E /* MapController+location.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,11 +197,21 @@
 		CE1DC5C424A7A12600B5E880 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CE1DC5C524A7A13000B5E880 /* UIFont.swift */,
-				CE86702E24D9C2E800C0B295 /* Color.swift */,
-				CE86703024D9CA3400C0B295 /* UIImage.swift */,
+				CE86702E24D9C2E800C0B295 /* Color+extension.swift */,
+				CE86703024D9CA3400C0B295 /* UIImage+extension.swift */,
+				CEAB3E19268E1CCC0009455E /* UIView+extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CEAB3DF8268E11010009455E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB3DF9268E11180009455E /* BaseViewController.swift */,
+				CEAB3DFD268E11D70009455E /* BaseButton.swift */,
+				CEAB3E00268E12780009455E /* BaseView.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB3E0B268E18150009455E /* fa-brands-400.ttf in Resources */,
+				CEAB3E0C268E18150009455E /* fa-regular-400.ttf in Resources */,
+				CEAB3E0D268E18150009455E /* fa-solid-900.ttf in Resources */,
 				CE1DC5A724A793D900B5E880 /* LaunchScreen.storyboard in Resources */,
 				CE1DC5A424A793D900B5E880 /* Assets.xcassets in Resources */,
 				CE1DC5AF24A793F300B5E880 /* Podfile in Resources */,
@@ -309,18 +335,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1DC59F24A793D600B5E880 /* MapController.swift in Sources */,
+				CEAB3DFE268E11D70009455E /* BaseButton.swift in Sources */,
+				CEAB3E1A268E1CCC0009455E /* UIView+extension.swift in Sources */,
 				CE1DC5BA24A79BD100B5E880 /* MapViewModel.swift in Sources */,
 				CE1DC5C324A7A11B00B5E880 /* Font.swift in Sources */,
 				CE1DC5B524A7991A00B5E880 /* CustomNavController.swift in Sources */,
-				CE86702F24D9C2E800C0B295 /* Color.swift in Sources */,
+				CE86702F24D9C2E800C0B295 /* Color+extension.swift in Sources */,
+				CEAB3DFA268E11190009455E /* BaseViewController.swift in Sources */,
 				CE1DC5C824A7A84B00B5E880 /* LocationManager.swift in Sources */,
-				CE1DC5C624A7A13000B5E880 /* UIFont.swift in Sources */,
 				CE1DC59B24A793D600B5E880 /* AppDelegate.swift in Sources */,
 				CE1DC5B824A79BB500B5E880 /* LeftMenuController.swift in Sources */,
+				CEAB3E23268E20C40009455E /* MapController+location.swift in Sources */,
 				CE1DC5D224A8E13800B5E880 /* MapController+nmaps.swift in Sources */,
 				CE1DC5D024A8D5FB00B5E880 /* Manager.swift in Sources */,
-				CE86703124D9CA3400C0B295 /* UIImage.swift in Sources */,
+				CE86703124D9CA3400C0B295 /* UIImage+extension.swift in Sources */,
 				CE1DC5CC24A7B34200B5E880 /* Market.swift in Sources */,
+				CEAB3E01268E12780009455E /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //
 
 enum Font: String {
-    case regular = "Font Awesome 5 Free-Regular-400.otf"
-    case solid = "Font Awesome 5 Free-Solid-900.otf"
-    case brand = "Font Awesome 5 Brands-Regular-400.otf"
+    case regular = "fa-regular-900.ttf"
+    case solid = "fa-solid-900.ttf"
+    case brand = "fa-brands-400.ttf"
 }

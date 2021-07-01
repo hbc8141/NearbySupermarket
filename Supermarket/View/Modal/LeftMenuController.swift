@@ -7,28 +7,37 @@
 
 import UIKit
 
-class LeftMenuContorller: UIViewController {
+class LeftMenuContorller: BaseViewController {
     
     // MARK: - Properties
-    private let menuView:UIView = {
-        let view:UIView = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
+    private let menuView:BaseView = {
+        let view:BaseView = BaseView()
         view.backgroundColor = UIColor.color(color: .white)
         
         return view
     }()
+    
+    private lazy var tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(touchUpBackgroundView(_:)))
+    
+    private var menuLeadingConstraint:NSLayoutConstraint?
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        self.view.addGestureRecognizer(self.tapGesture)
         
-        let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(touchUpBackgroundView(_:)))
-
-        self.view.addGestureRecognizer(tapGesture)
+        self.view.addSubview(menuView)
         
         self.setupLayouts()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            UIView.animate(withDuration: 0.5) {
+                self.menuLeadingConstraint?.constant = 0
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     // MARK: - Objc Function
@@ -37,12 +46,15 @@ class LeftMenuContorller: UIViewController {
     }
     
     // MARK: - Function
-    private func setupLayouts() -> Void {
+    override func setupLayouts() -> Void {
         NSLayoutConstraint.activate([
             self.menuView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            self.menuView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+
             self.menuView.widthAnchor.constraint(equalToConstant: 200),
             self.menuView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
+        
+        self.menuLeadingConstraint = self.menuView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: -200)
+        self.menuLeadingConstraint?.isActive = true
     }
 }
