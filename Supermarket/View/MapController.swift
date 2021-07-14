@@ -24,6 +24,15 @@ class MapController: BaseViewController {
     
     private lazy var menuButton:BaseButton = BaseButton(fontIcon: .alignJustify, style: .solid)
     
+    private let filterButton:BaseButton = {
+        let button:BaseButton = BaseButton(fontIcon: .filter, style: .solid)
+        button.backgroundColor = .white
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 25
+        
+        return button
+    }()
+    
     private let returnMyLocationButton:BaseButton = {
         let button:BaseButton = BaseButton(fontIcon: .crosshairs, style: .solid)
         button.backgroundColor = .white
@@ -40,6 +49,8 @@ class MapController: BaseViewController {
         
         return cameraUpdate
     }()
+    
+    private let lostInternetView:LostInternetView = LostInternetView()
 
     let viewModel:MapViewModel = MapViewModel()
     private let disposeBag:DisposeBag = DisposeBag()
@@ -52,7 +63,7 @@ class MapController: BaseViewController {
         self.view.backgroundColor = .white
         
         self.view.addSubviews(views: [
-            self.mapView, self.menuButton, self.returnMyLocationButton
+            self.mapView, self.menuButton, self.returnMyLocationButton, self.lostInternetView, self.filterButton
         ])
         
         self.setupLayouts()
@@ -81,10 +92,22 @@ class MapController: BaseViewController {
             self.returnMyLocationButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30),
             self.returnMyLocationButton.widthAnchor.constraint(equalToConstant: 50),
             self.returnMyLocationButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            self.filterButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30),
+            self.filterButton.widthAnchor.constraint(equalToConstant: 50),
+            self.filterButton.heightAnchor.constraint(equalToConstant: 50),
+            self.filterButton.bottomAnchor.constraint(equalTo: self.returnMyLocationButton.topAnchor, constant: -15),
+            
+            self.lostInternetView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.lostInternetView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            self.lostInternetView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            self.lostInternetView.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
     
     override func bindUI() -> Void {
+        NetworkMonitor.shared.connectionTypeOb.bind(to: self.lostInternetView.rx.isHidden).disposed(by: self.disposeBag)
+        
         self.menuButton.rx.tap
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .flatMap({ () -> Observable<LeftMenuContorller> in

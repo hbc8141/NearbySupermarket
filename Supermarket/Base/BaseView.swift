@@ -10,9 +10,10 @@ import UIKit
 class BaseView: UIView {
 
     // MARK: - Initialization
-    init() {
+    init(color: UIColor? = .white) {
         super.init(frame: .zero)
-        
+     
+        self.backgroundColor = color
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -20,4 +21,5 @@ class BaseView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupLayouts() -> Void {}
 }

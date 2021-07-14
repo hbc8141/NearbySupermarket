@@ -12,7 +12,11 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if NetworkMonitor.shared.isConnected {
+            print("You're connected internet")
+        } else {
+            print("You're not connected internet")
+        }
     }
     
     func bindUI() -> Void {}

@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // 네트워크 변경 감지
+        NetworkMonitor.shared.startMonitoring()
+
         let mapController:MapController = MapController()
         
         let window:UIWindow = UIWindow()

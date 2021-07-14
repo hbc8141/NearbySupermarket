@@ -21,6 +21,7 @@
 		CE1DC5CC24A7B34200B5E880 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5CB24A7B34200B5E880 /* Market.swift */; };
 		CE1DC5D024A8D5FB00B5E880 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5CF24A8D5FB00B5E880 /* Manager.swift */; };
 		CE1DC5D224A8E13800B5E880 /* MapController+nmaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1DC5D124A8E13800B5E880 /* MapController+nmaps.swift */; };
+		CE53A6DD269D8B0300BEF9D4 /* LocationPermissionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53A6DC269D8B0300BEF9D4 /* LocationPermissionController.swift */; };
 		CE86702724D9B23400C0B295 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE86702924D9B23400C0B295 /* InfoPlist.strings */; };
 		CE86702D24D9C2C900C0B295 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE86702C24D9C2C900C0B295 /* Colors.xcassets */; };
 		CE86702F24D9C2E800C0B295 /* Color+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE86702E24D9C2E800C0B295 /* Color+extension.swift */; };
@@ -33,6 +34,11 @@
 		CEAB3E0D268E18150009455E /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1DC5BD24A79F0200B5E880 /* fa-solid-900.ttf */; };
 		CEAB3E1A268E1CCC0009455E /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E19268E1CCC0009455E /* UIView+extension.swift */; };
 		CEAB3E23268E20C40009455E /* MapController+location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E22268E20C40009455E /* MapController+location.swift */; };
+		CEAB3E26268F1B4F0009455E /* LocationPermissionErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E25268F1B4F0009455E /* LocationPermissionErrorView.swift */; };
+		CEAB3E29268F1C280009455E /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E28268F1C280009455E /* BaseLabel.swift */; };
+		CEAB3E2C26928CE00009455E /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E2B26928CE00009455E /* BaseImageView.swift */; };
+		CEAB3E2F26928EFB0009455E /* LostInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E2E26928EFB0009455E /* LostInternetView.swift */; };
+		CEAB3E3226929E2E0009455E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB3E3126929E2E0009455E /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,7 @@
 		CE1DC5CB24A7B34200B5E880 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		CE1DC5CF24A8D5FB00B5E880 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		CE1DC5D124A8E13800B5E880 /* MapController+nmaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapController+nmaps.swift"; sourceTree = "<group>"; };
+		CE53A6DC269D8B0300BEF9D4 /* LocationPermissionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionController.swift; sourceTree = "<group>"; };
 		CE86702824D9B23400C0B295 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE86702A24D9B24C00C0B295 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE86702B24D9B24C00C0B295 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -68,6 +75,11 @@
 		CEAB3E00268E12780009455E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CEAB3E19268E1CCC0009455E /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		CEAB3E22268E20C40009455E /* MapController+location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapController+location.swift"; sourceTree = "<group>"; };
+		CEAB3E25268F1B4F0009455E /* LocationPermissionErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionErrorView.swift; sourceTree = "<group>"; };
+		CEAB3E28268F1C280009455E /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
+		CEAB3E2B26928CE00009455E /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
+		CEAB3E2E26928EFB0009455E /* LostInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostInternetView.swift; sourceTree = "<group>"; };
+		CEAB3E3126929E2E0009455E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +158,9 @@
 				CE1DC5B424A7991A00B5E880 /* CustomNavController.swift */,
 				CE1DC5D124A8E13800B5E880 /* MapController+nmaps.swift */,
 				CEAB3E22268E20C40009455E /* MapController+location.swift */,
+				CEAB3E25268F1B4F0009455E /* LocationPermissionErrorView.swift */,
+				CEAB3E2E26928EFB0009455E /* LostInternetView.swift */,
+				CE53A6DC269D8B0300BEF9D4 /* LocationPermissionController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +205,7 @@
 			children = (
 				CE1DC5C724A7A84B00B5E880 /* LocationManager.swift */,
 				CE1DC5CF24A8D5FB00B5E880 /* Manager.swift */,
+				CEAB3E3126929E2E0009455E /* NetworkMonitor.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -210,6 +226,8 @@
 				CEAB3DF9268E11180009455E /* BaseViewController.swift */,
 				CEAB3DFD268E11D70009455E /* BaseButton.swift */,
 				CEAB3E00268E12780009455E /* BaseView.swift */,
+				CEAB3E28268F1C280009455E /* BaseLabel.swift */,
+				CEAB3E2B26928CE00009455E /* BaseImageView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -341,16 +359,22 @@
 				CE1DC5C324A7A11B00B5E880 /* Font.swift in Sources */,
 				CE1DC5B524A7991A00B5E880 /* CustomNavController.swift in Sources */,
 				CE86702F24D9C2E800C0B295 /* Color+extension.swift in Sources */,
+				CEAB3E2C26928CE00009455E /* BaseImageView.swift in Sources */,
 				CEAB3DFA268E11190009455E /* BaseViewController.swift in Sources */,
 				CE1DC5C824A7A84B00B5E880 /* LocationManager.swift in Sources */,
 				CE1DC59B24A793D600B5E880 /* AppDelegate.swift in Sources */,
+				CEAB3E29268F1C280009455E /* BaseLabel.swift in Sources */,
 				CE1DC5B824A79BB500B5E880 /* LeftMenuController.swift in Sources */,
+				CEAB3E26268F1B4F0009455E /* LocationPermissionErrorView.swift in Sources */,
 				CEAB3E23268E20C40009455E /* MapController+location.swift in Sources */,
 				CE1DC5D224A8E13800B5E880 /* MapController+nmaps.swift in Sources */,
 				CE1DC5D024A8D5FB00B5E880 /* Manager.swift in Sources */,
 				CE86703124D9CA3400C0B295 /* UIImage+extension.swift in Sources */,
+				CEAB3E3226929E2E0009455E /* NetworkMonitor.swift in Sources */,
 				CE1DC5CC24A7B34200B5E880 /* Market.swift in Sources */,
+				CEAB3E2F26928EFB0009455E /* LostInternetView.swift in Sources */,
 				CEAB3E01268E12780009455E /* BaseView.swift in Sources */,
+				CE53A6DD269D8B0300BEF9D4 /* LocationPermissionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +529,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLJAQBQM4Z;
 				INFOPLIST_FILE = Supermarket/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DLJAQBQM4Z;
 				INFOPLIST_FILE = Supermarket/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
