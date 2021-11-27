@@ -1,18 +1,18 @@
 PODS:
   - FontAwesome.swift (1.9.1)
-  - NMapsMap (3.8.0)
-  - RxCocoa (5.0.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.0.1):
-    - RxSwift (~> 5)
-  - RxSwift (5.0.1)
+  - NMapsMap (3.13.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
 
 DEPENDENCIES:
   - FontAwesome.swift
   - NMapsMap
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
+  - RxCocoa (= 6.2.0)
+  - RxSwift (= 6.2.0)
 
 SPEC REPOS:
   trunk:
@@ -24,11 +24,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
-  NMapsMap: b3633ad688483a318be9293aeddd323a714fb08b
-  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: 7099d342365fa34fdff74300524ae71e1ab052d6
+PODFILE CHECKSUM: 995cd23a784c62c0f23d24e3e608ecdfdd1b7101
 
 COCOAPODS: 1.10.1

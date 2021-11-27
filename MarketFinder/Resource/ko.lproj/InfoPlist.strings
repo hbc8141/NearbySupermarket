@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  MarketFinder
+
+  Created by User on 2021/10/18.
+  
+*/
+
+// Info.plist
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "위치를 켜서 좀 더 나은 정보를 받아보세요.";
+"NSLocationWhenInUseUsageDescription" = "위치를 켜서 좀 더 나은 정보를 받아보세요.";
+"NSLocationAlwaysUsageDescription" = "위치를 켜서 좀 더 나은 정보를 받아보세요.";

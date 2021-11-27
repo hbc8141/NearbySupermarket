@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  MarketFinder
+
+  Created by User on 2021/10/18.
+  
+*/
+
+// PermissionController
+"RequestLocationPermission" = "Turn on the location and get better information. This setting can be changed at any time in the preferences.";
+"RequestNotificationPermission" = "Turn on the Market Finder push notification and receive a variety of information as notifications. This setting can be changed at any time in the preferences.";
+
+"RequestLocationPermissionButton" = "Turn on Precise Location";
+"RequestNotificationPermissionButton" = "Request Notification Service";
+
+
+// AppUpdateController
+"OptionalUpdateTitle" = "Update to Market Finder in App Store.";
+"RequiredUpdateTitle" = "더 나은 서비스 제공을 위해 Market Finder 앱을 업데이트 한 후 이용해주세요.";
+"OptionalUpdateButton" = "다음에 하기";
+"RequiredUpdateButton" = "스토어로 이동하기";
