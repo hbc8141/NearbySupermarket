@@ -12,9 +12,9 @@ class AppUpdateController: BaseController {
     // MARK: - Properties
     private let contentLabel:BaseLabel = BaseLabel()
     
-    private let optionalUpdateButton:BaseButton = BaseButton()
+    private let optionalUpdateButton:BaseButton = BaseButton(title: "OptionalUpdateButton")
     
-    private let requiredUpdateButton:BaseButton = BaseButton()
+    private let requiredUpdateButton:BaseButton = BaseButton(title: "RequiredUpdateButton")
     
     private let viewModel:AppUpdateViewModel = AppUpdateViewModel()
     
@@ -85,6 +85,18 @@ class AppUpdateController: BaseController {
 
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func moveToMapController() -> Void {
+        UNUserNotificationCenter.current().getNotificationSettings { (setting:UNNotificationSettings) in
+            var controller:UIViewController = UIViewController()
+            
+//            if setting.authorizationStatus != .authorized {
+//                controller = 
+//            } else {
+//                
+//            }
         }
     }
 }

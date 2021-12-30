@@ -23,7 +23,17 @@ struct Market {
         self.name = name
         self.location = location
     }
-    
+
+    // 마켓 마커 클릭 시 카메라 중심 반환
+    func cameraUpdate(zoom: Double) -> NMFCameraUpdate {
+        let target:NMGLatLng = NMGLatLng(lat: self.location.latitude, lng: self.location.longitude)
+        
+        let cameraUpdate:NMFCameraUpdate = NMFCameraUpdate(position: NMFCameraPosition(target, zoom: zoom))
+        cameraUpdate.animation = .fly
+        cameraUpdate.animationDuration = 0.7
+        
+        return cameraUpdate
+    }
 }
 
 enum Brand: String {

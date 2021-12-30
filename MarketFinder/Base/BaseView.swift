@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class BaseView: UIView {
 
+    // MARK: - Properties
+    let disposeBag:DisposeBag = DisposeBag()
+    
     // MARK: - Life Cycle
     init(color: UIColor? = .white) {
         super.init(frame: .zero)

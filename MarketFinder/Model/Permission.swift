@@ -41,8 +41,9 @@ enum Permission {
         return text
     }
     
+    // 권한 아이콘
     var icon:UIImage {
-        let fontIcon:FontAwesome = .mapMarkedAlt
+        let fontIcon:FontAwesome = self == Permission.location ? .mapMarkedAlt : .bell
         
         let image:UIImage = UIImage.fontAwesomeIcon(name: fontIcon, style: .solid, textColor: .black, size: CGSize(width: 250, height: 250))
         

@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene:UIWindowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: windowScene)
-//        self.window?.rootViewController = AppUpdateController(updated: .optional)
-        self.window?.rootViewController = MapController()
+        self.window?.rootViewController = NotificationController()
+//        self.window?.rootViewController = MapController()
         self.window?.overrideUserInterfaceStyle = .light
         self.window?.makeKeyAndVisible()
     }

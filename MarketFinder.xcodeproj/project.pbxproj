@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1325312752FB47000ED2D8 /* MapController+NMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1325302752FB47000ED2D8 /* MapController+NMap.swift */; };
+		CE1325372753AC5B000ED2D8 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1325362753AC5B000ED2D8 /* MenuController.swift */; };
+		CE13253F2754D958000ED2D8 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE13253E2754D958000ED2D8 /* BottomView.swift */; };
+		CE9AE8E8277A155D00435490 /* AppStoreCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AE8E7277A155D00435490 /* AppStoreCheck.swift */; };
+		CE9AE8F6277B0B9D00435490 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AE8F5277B0B9D00435490 /* NotificationController.swift */; };
+		CE9AE90A277B47D800435490 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AE909277B47D800435490 /* LocationController.swift */; };
+		CE9AE920277DD7AB00435490 /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AE90E277DD74400435490 /* NotificationViewModel.swift */; };
 		CEC551162749FB21002D37A4 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC551152749FB21002D37A4 /* CustomInfoWindow.swift */; };
 		CEE3190127192B180009656A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3190027192B180009656A /* AppDelegate.swift */; };
 		CEE3190327192B180009656A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3190227192B180009656A /* SceneDelegate.swift */; };
@@ -70,6 +77,13 @@
 		1E7F659639C38239D99A869E /* Pods_MarketFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A64D73A8FCEFAEE73BBA826 /* Pods-MarketFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketFinder.debug.xcconfig"; path = "Target Support Files/Pods-MarketFinder/Pods-MarketFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		C77A737DB68F3A999AA2D126 /* Pods-MarketFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketFinder.release.xcconfig"; path = "Target Support Files/Pods-MarketFinder/Pods-MarketFinder.release.xcconfig"; sourceTree = "<group>"; };
+		CE1325302752FB47000ED2D8 /* MapController+NMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapController+NMap.swift"; sourceTree = "<group>"; };
+		CE1325362753AC5B000ED2D8 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		CE13253E2754D958000ED2D8 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		CE9AE8E7277A155D00435490 /* AppStoreCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreCheck.swift; sourceTree = "<group>"; };
+		CE9AE8F5277B0B9D00435490 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		CE9AE909277B47D800435490 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		CE9AE90E277DD74400435490 /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		CEC551152749FB21002D37A4 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		CEE318FD27192B180009656A /* MarketFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE3190027192B180009656A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +177,29 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE1325352753AC52000ED2D8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CE1325362753AC5B000ED2D8 /* MenuController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CE9AE8F4277B0B9400435490 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE9AE913277DD74C00435490 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				CE9AE90E277DD74400435490 /* NotificationViewModel.swift */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
 		CEE318F427192B180009656A = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +272,7 @@
 		CEE3193D27192BF70009656A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CE1325352753AC52000ED2D8 /* Menu */,
 				CEE31A2A272002BE0009656A /* Update */,
 				CEE319B3271D2D120009656A /* Map */,
 				CEE319B2271D2D0B0009656A /* Permission */,
@@ -245,6 +283,7 @@
 		CEE3193E27192BFE0009656A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CE9AE913277DD74C00435490 /* Permission */,
 				CEE3196F27192E960009656A /* MapViewModel.swift */,
 				CEE31983271D19C40009656A /* PermissionViewModel.swift */,
 				CEE31A30272002DE0009656A /* AppUpdateViewModel.swift */,
@@ -298,8 +337,11 @@
 		CEE319B2271D2D0B0009656A /* Permission */ = {
 			isa = PBXGroup;
 			children = (
+				CE9AE8F4277B0B9400435490 /* Base */,
 				CEE3197E27194D130009656A /* PermissionController.swift */,
 				CEE319B4271D2D200009656A /* PermissionView.swift */,
+				CE9AE8F5277B0B9D00435490 /* NotificationController.swift */,
+				CE9AE909277B47D800435490 /* LocationController.swift */,
 			);
 			path = Permission;
 			sourceTree = "<group>";
@@ -308,6 +350,8 @@
 			isa = PBXGroup;
 			children = (
 				CEE3190427192B180009656A /* MapController.swift */,
+				CE1325302752FB47000ED2D8 /* MapController+NMap.swift */,
+				CE13253E2754D958000ED2D8 /* BottomView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -316,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE31A09271E61FD0009656A /* CoreLocationService.swift */,
+				CE9AE8E7277A155D00435490 /* AppStoreCheck.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -504,34 +549,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9AE920277DD7AB00435490 /* NotificationViewModel.swift in Sources */,
 				CEE3195327192C550009656A /* BaseTableViewCell.swift in Sources */,
 				CEE3195827192C550009656A /* BaseCollectionView.swift in Sources */,
 				CEE3196527192C9A0009656A /* UIColor+Extension.swift in Sources */,
 				CEE3195927192C550009656A /* BaseController.swift in Sources */,
 				CEE3195027192C550009656A /* BaseCollectionViewCell.swift in Sources */,
+				CE9AE8E8277A155D00435490 /* AppStoreCheck.swift in Sources */,
 				CEE3190527192B180009656A /* MapController.swift in Sources */,
 				CEE319AB271D2CD40009656A /* Permission.swift in Sources */,
 				CEE3190B27192B180009656A /* MarketFinder.xcdatamodeld in Sources */,
 				CEE3195F27192C550009656A /* BaseButton.swift in Sources */,
 				CEE3199F271D28CD0009656A /* String+Extension.swift in Sources */,
+				CE1325312752FB47000ED2D8 /* MapController+NMap.swift in Sources */,
 				CEE3195E27192C550009656A /* BaseTextField.swift in Sources */,
 				CEE31984271D19C40009656A /* PermissionViewModel.swift in Sources */,
 				CEE3195C27192C550009656A /* BaseLabel.swift in Sources */,
 				CEE3190127192B180009656A /* AppDelegate.swift in Sources */,
+				CE1325372753AC5B000ED2D8 /* MenuController.swift in Sources */,
 				CEE31A36272008020009656A /* AppUpdate.swift in Sources */,
 				CEE3195427192C550009656A /* BasePageControl.swift in Sources */,
 				CEE3195A27192C550009656A /* BaseProgressView.swift in Sources */,
 				CEE31A2C272002CB0009656A /* AppUpdateController.swift in Sources */,
 				CEE3195627192C550009656A /* BaseTableView.swift in Sources */,
+				CE9AE90A277B47D800435490 /* LocationController.swift in Sources */,
 				CEE3195227192C550009656A /* BaseScrollView.swift in Sources */,
 				CEE3195B27192C550009656A /* BaseTableController.swift in Sources */,
 				CEE3195727192C550009656A /* BaseNavigationController.swift in Sources */,
 				CEC551162749FB21002D37A4 /* CustomInfoWindow.swift in Sources */,
 				CEE3197F27194D130009656A /* PermissionController.swift in Sources */,
 				CEE3197027192E960009656A /* MapViewModel.swift in Sources */,
+				CE13253F2754D958000ED2D8 /* BottomView.swift in Sources */,
 				CEE31A31272002DE0009656A /* AppUpdateViewModel.swift in Sources */,
 				CEE319BD271D2D650009656A /* UIView+Extension.swift in Sources */,
 				CEE3195527192C550009656A /* BaseImageView.swift in Sources */,
+				CE9AE8F6277B0B9D00435490 /* NotificationController.swift in Sources */,
 				CEE31A0A271E61FD0009656A /* CoreLocationService.swift in Sources */,
 				CEE3195D27192C550009656A /* BaseView.swift in Sources */,
 				CEE319B5271D2D200009656A /* PermissionView.swift in Sources */,

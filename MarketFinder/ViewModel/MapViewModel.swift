@@ -11,9 +11,15 @@ import RxSwift
 class MapViewModel {
     
     // MARK: - Properties
+    private let nightmode = false
 
     // MARK: - Life Cycle
     init() {
+        
+    }
+    
+    // 일출일몰 계산
+    func calSunriseAndSun() {
         
     }
 }
